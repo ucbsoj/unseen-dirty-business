@@ -8,6 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <%= t.include("partials/_meta.html", grunt.data.json) %>
 </head>
@@ -19,14 +20,26 @@
         <div class="sticky">
             <div class="bg-video"><iframe src="https://player.vimeo.com/video/331378653?background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
         </div>
+
         <div class="title">
             <h1 style="width:800px ! important; padding-bottom: 10px ! important;"><img src="./assets/title.png"></h1>
             <div class="deck">Plastic recyclers in Minh Khai, Vietnam wrestle with the blessings and curses of an empire
                 built on our trash.</div>
-            <a href="https://vimeo.com/331151004" class="film">PLAY</a>
+            <div id="play-video" class="film">PLAY</div>
             <small class="scroll">SCROLL TO READ</small>
         </div>
     </section>
+
+
+
+    <div class="fullvideo">
+      <div class="close">X</div>
+      <div class="fullvideo-wrapper">
+        <div class="embed-container">
+          <iframe src="https://player.vimeo.com/video/332607128" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
 
     <section id="second">
         <article data-50-bottom-top="opacity:0" data-100-center-center="opacity:1">
@@ -47,6 +60,10 @@
                 sheet for the “good” pile, two clotting brown strips for the “bad.” Behind her, a young man wearing
                 coveralls and a t-shirt, feeds handfuls of plastic from the “good” pile into a machine that resembles,
                 somewhat eerily, the wood-chipper from Fargo.</p>
+
+                <div class="embed-container" data-50-bottom-top="opacity:0; transform:scale(0.9);" data-100-center-center="opacity:1; transform:scale(1);">
+                <iframe src="https://player.vimeo.com/video/331630179?background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+
             <p>From there, the mutilated plastic runs through a channel of steaming water into a sieve where it is fed,
                 once again by hand, into a melting furnace. The furnace is fitted with a machine that might best be
                 compared to a pasta-maker, which produces spaghetti-like strands of plastic on their way to be cut up into
@@ -60,11 +77,19 @@
             <p>The “you” might be translated here as “Americans.” Or, more generally, as “the West.” But what Phuong
                 means unequivocally is: anyone sending their undesirable plastic waste to her.</p>
         </article>
-        <div class="embed-container"><iframe src="https://player.vimeo.com/video/331630179?background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
     </section>
+
+
+
+
+    <div class="spacer"></div>
+
+
+
     <section id="third">
-        <article>
-          <div class="linebreak"><h2><span>From Golden State to Vietnam</span></h2></div>
+        <article data-100-bottom-top="opacity:0" data-1000-center-center="opacity:1">
+          <div data-100-bottom-top="transform:scale(1.3);" data-center-center="transform:scale(1);" class="linebreak">
+            <h2><span>From Golden State to Vietnam</span></h2></div>
             <p>Most of us don’t think much about recycling. We rinse our yogurt containers, crush our milk cartons,
                 and break down our boxes. We pause in front of public waste bins, puzzling over how to classify our
                 single-use forks or coffee cups. But once our trash hits the curb in a blue or a brown or a green bin, the
@@ -75,9 +100,13 @@
                 globe through a system of trade that transforms it from product, to waste, to commodity, and back to
                 product again.</p>
 
+            <div class="spacer"></div>
+
             <div id="band-graphic" style="height:90vh;">
                 <!-- <img style="padding-left: 20vh; padding-right: 20vh; padding-top:20vh; padding-bottom:20vh" src="./assets/graphics.svg"> -->
             </div>
+
+            <div class="spacer"></div>
 
             <p>There’s a hierarchy to the recycling world, too. Not all plastic is created equal. Items are labeled according
                 to chemical makeup, with numbers representing different recipes of plastic which involve ingredients with
@@ -106,9 +135,13 @@
      <img src="./assets/bg-2.jpg">
    </div>-->
     </section>
+
+
+
     <section id="fourth">
-        <article>
-          <div class="linebreak"><h2><span>A Shifting Landscape</span></h2></div>
+        <article data-100-bottom-top="opacity:0" data-1000-center-center="opacity:1">
+          <div data-100-bottom-top="transform:scale(1.3);" data-center-center="transform:scale(1);" class="linebreak">
+            <h2><span>A Shifting Landscape</span></h2></div>
             <p>When it comes to change in Minh Khai, Tuan Dinh has had a front row seat. “This career has been a
                 tradition in my village,” he says. “I am the next generation.”</p>
             <p>The forty-year-0ld has been in the recycling business for half his life. Like many young men, he used to
@@ -130,7 +163,9 @@
                 home to factories, but everything connected to the recycling process. When plastic enters the village, it
                 arrives in raw bales. From there it might go to one business to be sorted, another to be cleaned and made
                 into pellets, and yet another to be fashioned into fresh plastic bags.</p>
+
             <iframe frameborder="0" class="juxtapose" width="100%" height="1200px" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=693b0cbe-62ed-11e9-8106-0edaf8f81e27"></iframe>
+
             <p>Entrepreneurs like Tuan have monetized every aspect of this cycle. He moves material from one stage of
                 the process to the next. One of his neighbors sells containers that other businesses use to corral their
                 pellets. A woman across town cooks and delivers the per diem meals that business owners provide to
@@ -145,9 +180,14 @@
                 century means.</p>
         </article>
     </section>
+
+
+
+
     <section id="fifth">
-        <article>
-          <div class="linebreak"><h2><span>An Evolving Ecology</span></h2></div>
+        <article data-100-bottom-top="opacity:0" data-800-center-center="opacity:1">
+          <div data-100-bottom-top="transform:scale(1.3);" data-center-center="transform:scale(1);" class="linebreak">
+            <h2><span>An Evolving Ecology</span></h2></div>
             <p>In the 1950s, Minh Khai was an agricultural community. Locals called it làng khoai – the potato village
                 – for the root vegetable, khoai, that served as the region’s economic foundation. Once the Vietnam War
                 began, however, the able-bodied young men of Minh Khai were called to fight. The potato village was left
@@ -181,9 +221,15 @@
                 away on motorbikes – two per seat – to assist at the recently-offered job site.</p>
         </article>
     </section>
+
+
+
+
+
     <section id="sixth">
-        <article>
-            <h2>Mixed Blessings</h2>
+        <article data-100-bottom-top="opacity:0" data-1500-center-center="opacity:1">
+            <div data-100-bottom-top="transform:scale(1.2);" data-center-center="transform:scale(1);" class="linebreak">
+              <h2><span>Mixed Blessings</span></h2></div>
             <p>Across town, Le Thi Cam is unloading a fresh delivery of her own. She’s a boisterous woman, with a
                 gravelly voice and a laugh that starts in her belly. Introducing herself as “Lady Orange” (a play on words
                 that combines the phonetics of her surname with the English translation of cam, or “oranges”), she
@@ -213,9 +259,29 @@
                 worked in Minh Khai all day, and returned to the suburbs of Hanoi at night.</p>
             <p>Then, one night, a group of vandals snuck into her warehouse and burned it to the ground. Thirty tons of
                 plastic, gone in a single evening.</p>
-            <div class="large-img">
-                <img style="padding:100px;" src="./assets/photo1.jpg">
-            </div>
+
+                <div class="spacer"></div>
+
+                <div class="spacer"></div>
+
+                <div class="slideshow">
+                    <div class='carousel'>
+                     <div class='carousel-cell'><img src="./assets/gallery/1.jpg"></div>
+                     <div class='carousel-cell'><img src="./assets/gallery/2.jpg"></div>
+                     <div class='carousel-cell'><img src="./assets/gallery/3.jpg"></div>
+                     <div class='carousel-cell'><img src="./assets/gallery/4.jpg"></div>
+                     <div class='carousel-cell'><img src="./assets/gallery/5.jpg"></div>
+                     <div class='carousel-cell'><img src="./assets/gallery/6.jpg"></div>
+                     <div class='carousel-cell'><img src="./assets/gallery/7.jpg"></div>
+                     <div class='carousel-cell'><img src="./assets/gallery/8.jpg"></div>
+                    </div>
+                      </div>
+
+                <div class="spacer"></div>
+
+                <div class="spacer"></div>
+
+
             <p>“I couldn’t save anything,” she says. “Just one flash of fire, then everything was done.”</p>
             <p>Cam and her husband moved back to Minh Khai and rebuilt their business. Now, they sleep above the
                 machines that, by day, melt plastics from all around the world.</p>
@@ -236,9 +302,14 @@
                 by the Ministry of Environmental Protection – nearly half of all U.S. plastic exports shifted to Thailand,
                 Malaysia and Vietnam. And as the flow of foreign plastic into Vietnam increased, the problems multiplied.</p>
     </section>
+
+
+
+
     <section id="seventh">
-        <article>
-          <div class="linebreak"><h2><span>A Deadly Legacyd</span></h2></div>
+        <article data-100-bottom-top="opacity:0" data-1500-center-center="opacity:1">
+          <div data-100-bottom-top="transform:scale(1.3);" data-center-center="transform:scale(1);" class="linebreak">
+            <h2><span>A Deadly Legacy</span></h2></div>
             <p>Not everyone in Minh Khai works with recyclables. But all are, in one way or another, impacted by the
                 trade that has become ubiquitous.</p>
             <p>Nam Nguyen spends her afternoons weeding, watering, or harvesting a small garden plot near Minh Kai’s
@@ -254,7 +325,11 @@
                 bags. In July, Vietnam’s Ministry of Natural Resources and Environment dispatched researchers to test
                 the water in Minh Khai. The scientists collected samples from a dozen places along the canal; all twelve
                 contained pollutants above the national standard.</p>
-            <div class="embed-container"><iframe src="https://player.vimeo.com/video/331629642?background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+
+
+            <div class="embed-container" data-50-bottom-top="opacity:0; transform:scale(0.9);" data-100-center-center="opacity:1; transform:scale(1);">
+              <iframe src="https://player.vimeo.com/video/331629642?background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+
             <p>Each ton of plastic in Minh Khai requires between six and seven cubic meters of water to clean it – about
                 the same volume of liquid inside a concrete mixer. Every truckload of water used in the cleaning process
                 eventually makes its way back to the Bach Mai canal. It runs down streets, along gutters, and through
@@ -298,9 +373,14 @@
                 Mai canal. Those chemicals build up in the meat, rice, and produce that fill plates all over town.</p>
         </article>
     </section>
+
+
+
+
     <section id="eighth">
-        <article>
-          <div class="linebreak"><h2><span>The Cost of Doing Business</span></h2></div>
+        <article data-100-bottom-top="opacity:0" data-800-center-center="opacity:1">
+          <div data-100-bottom-top="transform:scale(1.3);" data-center-center="transform:scale(1);" class="linebreak">
+            <h2><span>The Cost of Doing Business</span></h2></div>
             <p>Tuan’s favorite meal is a simple one: Rice, soup, meat and fish. He prefers Minh Khai’s traditional fare
                 to the more elaborate, and expensive, specialties available in Hanoi. But it’s still hours before lunch time,
                 so Tuan contents himself with a cigarette break between deliveries.</p>
@@ -314,7 +394,10 @@
                 necessity after being diagnosed with first-stage lung cancer last year. When asked whether this diagnosis
                 makes him think differently about his current work, however, the machinist merely shakes his head. As
                 another laborer nearby puts it: “I will worry about the risks later. Now I have to work.”</p>
-            <div class="embed-container"><iframe src="https://player.vimeo.com/video/331630170?background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+
+            <div class="embed-container" data-50-bottom-top="opacity:0; transform:scale(0.9);" data-100-center-center="opacity:1; transform:scale(1);">
+            <iframe src="https://player.vimeo.com/video/331630170?background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+
             <p>When it comes to pollution, Michael DiGregorio says the root of Minh Khai’s problem is a regulation
                 issue. “On the one hand, these are remarkable places where you can see market coordination at the level
                 of the household,” he says. In a socialist republic like Vietnam, craft villages serve as potent reminders of
@@ -345,16 +428,24 @@
                 enforce standards, individual businesses are even less incentivized to play by the rules.</p>
         </article>
     </section>
+
+
+
+
     <section id="nineth">
-        <article>
-          <div class="linebreak"><h2><span>Global Complications, Local Consequences</span></h2></div>
+        <article data-100-bottom-top="opacity:0" data-800-center-center="opacity:1">
+          <div data-100-bottom-top="transform:scale(1.3);" data-center-center="transform:scale(1);" class="linebreak">
+            <h2><span>Global Complications, Local Consequences</span></h2></div>
             <p>This was a problem Vietnam faced on a global scale in 2018, according to Tuan Nguyen, who reports
                 on economics and trade for Tien Phong, one of Vietnam’s largest newspapers. Inundated with plastics in
                 the wake of China’s “National Sword” policy, government officials were at a loss.</p>
             <p>“There were thousands of scrap containers backlogged in Vietnam’s ports,” says Nguyen. The Ministry of
                 Natural Resources and Environment was quickly ordered to “investigate, verify and solve the problem”
                 and “prevent Vietnam from becoming the world’s landfill.”</p>
-            <div class="embed-container"><iframe src="https://player.vimeo.com/video/331629650?background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+
+            <div class="embed-container" data-50-bottom-top="opacity:0; transform:scale(0.9);" data-100-center-center="opacity:1; transform:scale(1);">
+            <iframe src="https://player.vimeo.com/video/331629650?background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+
             <p>The ministry’s solution: a ban to mirror “National Sword.” In an attempt to stem the tide of displaced
                 (and still contaminated) plastics, Vietnam froze new imports arriving in Hai Phong port.</p>
             <p>The ripple effects of that decision can still be felt in Minh Khai. On the street where Le Thi Cam and her
@@ -398,9 +489,16 @@
                 dirty business.” But he adds: “People earn their living on it.”</p>
         </article>
     </section>
+
+
+
+
+
+
     <section id="tenth">
-        <article>
-          <div class="linebreak"><h2><span>Moving Forward</span></h2></div>
+        <article data-100-bottom-top="opacity:0" data-800-center-center="opacity:1">
+          <div data-100-bottom-top="transform:scale(1.3);" data-center-center="transform:scale(1);" class="linebreak">
+            <h2><span>Moving Forward</span></h2></div>
             <p>Minh Khai’s future remains as murky as the water in its last and only lake. There were once dozens of
                 ponds and estuaries near the village, but most were filled in to satisfy a growing demand for factory real
                 estate. This opaque green pool is all that remains of the area’s once lush wetlands.</p>
@@ -408,7 +506,10 @@
                 sitting on a park bench near the water. After nearly 50 years in the recycling business, Huan’s now retired.
                 Behind him, a group of men – all former plastics workers – are loudly observing a chess match. They
                 comment and cheer openly, egging the competitors on as if it were a boxing match, not a game of strategy.</p>
-            <div class="embed-container"><iframe src="https://player.vimeo.com/video/331629627?background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+
+            <div class="embed-container" data-50-bottom-top="opacity:0; transform:scale(0.9);" data-100-center-center="opacity:1; transform:scale(1);">
+            <iframe src="https://player.vimeo.com/video/331629627?background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+
             <p>One of the other retirees, Hanh Nguyen, drifts toward the lake; he’s looking for fish. Hanh raises Tilapia
                 and a breed of ceremonial goldfish, which he admits are more for aesthetic than economic purposes.
                 “In the morning they will swim up [to the surface],” he says. “It’s stunning.”</p>
@@ -428,6 +529,9 @@
             <p>“They don’t have to collect trash,” he says. “That’s enough.”</p>
         </article>
     </section>
+
+
+
     <script src="app.js" async></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
     <script>

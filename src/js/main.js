@@ -1,9 +1,11 @@
 import $ from "jquery"; // importing jQuery, you can delete if not needed
+import Flickity from "flickity";
 require("./lib/social"); // Twitter intent JS
 const d3 = require("d3");
 
 
 
+var flky = new Flickity( '.carousel', {});
 
 
 d3.svg("assets/graphics.svg").then(function(data){
@@ -122,3 +124,15 @@ $(document).scroll(function() {
 
 
 });
+
+
+
+
+$('#play-video').click(function(){
+  $('.fullvideo').css('display','block');
+});
+
+$('.close').click(function() {
+  $('.fullvideo').css('display','none');
+  
+})
