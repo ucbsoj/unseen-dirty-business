@@ -532,6 +532,9 @@ Translation by Diep Pham, Diep Nguyen and Alexandre Bui</br>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
     <script>
     var s = skrollr.init({forceHeight:false});
+    jQuery(document).ready(function(){
+      s.refresh();
+    })
     </script>
     <%= t.include("partials/_footer.html") %>
     <%= t.include("partials/_analytics.html", grunt.data.json) %>
