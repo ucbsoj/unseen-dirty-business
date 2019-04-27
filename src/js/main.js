@@ -8,7 +8,22 @@ const d3 = require("d3");
 var flky = new Flickity( '.carousel', {});
 
 
+var timer;
+
+$(window).on("resize", function() {
+
+    clearTimeout(timer);
+
+    timer = window.setTimeout(function() {
+        $('.juxtapose').attr('src', function(i, val) { return val; });
+    }, 300);
+
+});
+
+
 d3.svg("assets/graphics.svg").then(function(data){
+
+
   var chart = d3.select(data);
 
   d3.select("#band-graphic").node().insertBefore(chart.select("svg").node(), null);
@@ -86,7 +101,18 @@ d3.svg("assets/graphics.svg").then(function(data){
       d3.select(this).style("fill-opacity", 1);
     })
     .on("mousemove", function(){
-      tooltip.attr("transform", "translate(" + (d3.mouse(this)[0] - 100) + "," + (d3.mouse(this)[1] - 150) + ")");
+      let mx = (d3.mouse(this)[0] - 100);
+      let my = (d3.mouse(this)[1] - 150);
+
+
+      if(mx < -19){
+        mx = mx + 40;
+      }
+      if(my < -19){
+        my = my + 40 + 75;
+      }
+
+      tooltip.attr("transform", "translate(" + mx + "," + my + ")");
     })
 })
 
