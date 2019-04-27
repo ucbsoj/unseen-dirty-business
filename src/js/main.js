@@ -134,5 +134,5 @@ $('#play-video').click(function(){
 
 $('.close').click(function() {
   $('.fullvideo').css('display','none');
-  
+
 })
