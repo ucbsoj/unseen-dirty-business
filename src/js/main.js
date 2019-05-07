@@ -3,7 +3,11 @@ import Flickity from "flickity";
 require("./lib/social"); // Twitter intent JS
 const d3 = require("d3");
 
+var s = skrollr.init({forceHeight:false});
 
+jQuery(window).load(function(){
+  s.refresh();
+});
 
 var flky = new Flickity( '.carousel', {});
 
