@@ -5,14 +5,17 @@ const d3 = require("d3");
 
 var s = skrollr.init({forceHeight:false});
 
-jQuery(window).load(function(){
-  s.refresh();
-});
+
 
 var flky = new Flickity( '.carousel', {});
 
 
 var timer;
+
+
+$(window).on('load', function() {
+  s.refresh();
+});
 
 $(window).on("resize", function() {
 
