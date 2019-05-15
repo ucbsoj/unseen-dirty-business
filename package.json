@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/ucbsoj/unseen-dirty-business.git"
   },
-  "scripts":{
+  "scripts": {
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
@@ -26,6 +26,7 @@
     "d3-fetch": "^1.1.2",
     "exorcist": "^0.4.0",
     "flickity": "^2.2.0",
+    "gh-pages": "^2.0.1",
     "google-spreadsheets": "^0.5.1",
     "googleapis": "^18.0.0",
     "grunt": "^1.0.0",
