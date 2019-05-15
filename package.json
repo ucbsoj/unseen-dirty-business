@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/ucbsoj/unseen-dirty-business.git"
   },
+  "scripts":{
+    "deploy": "gh-pages -d build"
+  },
   "dependencies": {
     "archieml": "^0.3.1",
     "async": "^2.2.0",
