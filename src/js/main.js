@@ -163,10 +163,12 @@ $(document).scroll(function() {
 
 $('#play-video').click(function(){
   $('.fullvideo').css('display','block');
+  $('header').css('display','none');
 });
 
 $('.close').click(function() {
   $('.fullvideo').css('display','none');
+  $('header').css('display','flex');
 
 })
 
