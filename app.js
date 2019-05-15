@@ -32948,10 +32948,12 @@ _$d3Node_31.svg("assets/graphics.svg").then(function (data) {
 
 (0, _jquery2.default)('#play-video').click(function () {
   (0, _jquery2.default)('.fullvideo').css('display', 'block');
+  (0, _jquery2.default)('header').css('display', 'none');
 });
 
 (0, _jquery2.default)('.close').click(function () {
   (0, _jquery2.default)('.fullvideo').css('display', 'none');
+  (0, _jquery2.default)('header').css('display', 'flex');
 });
 
 (0, _jquery2.default)(document).ready(function () {
