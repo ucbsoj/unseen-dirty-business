@@ -899,6 +899,23 @@ header .social-links {
   border-left: none;
   border-bottom: none;
 }
+.route {
+  fill: none;
+  stroke: #4a575b;
+  opacity: 0.6;
+  stroke-linecap: round;
+}
+.land {
+  fill: #c9c9c9;
+}
+svg {
+  background: #efefef;
+}
+h1 {
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
 footer {
   color: #fff;
   font-family: "Lato", sans-serif;
