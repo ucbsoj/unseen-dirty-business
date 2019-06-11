@@ -46,7 +46,7 @@ d3.svg("assets/graphics.svg").then(function(data){
     .style("opacity", 0);
 
   tooltip.append("rect")
-    .attr("width", 80)
+    .attr("width", 85)
     .attr("height", 75)
     .attr("x", 20)
     .attr("y", 20)
@@ -102,11 +102,13 @@ d3.svg("assets/graphics.svg").then(function(data){
       tooltipTextStartData.text(dataStart);
       tooltipTextEndData.text(dataEnd)
 
+    })
 
-    })
     .on("mouseout", function(){
-      d3.select(this).style("fill-opacity", 1);
+      d3.select(this).style("fill-opacity", 1)
+      tooltip.style("opacity",0);
     })
+
     .on("mousemove", function(){
       let mx = (d3.mouse(this)[0] - 100);
       let my = (d3.mouse(this)[1] - 150);
@@ -121,6 +123,7 @@ d3.svg("assets/graphics.svg").then(function(data){
 
       tooltip.attr("transform", "translate(" + mx + "," + my + ")");
     })
+
 })
 
 
@@ -197,4 +200,3 @@ $( document ).ready(function() {
   });
 
 });
-
