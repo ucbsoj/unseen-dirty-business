@@ -632,7 +632,7 @@ Translation by Diep Pham, Diep Nguyen and Alexandre Bui</br>
     var g1 = svg.append("g");
     var g2 = svg.append("g");
 
-    d3.json("assets/world.json",function(error,world) {
+    d3.json("./assets/world.json",function(error,world) {
       g1.insert("path")
         .datum(topojson.feature(world, world.objects.countries))
         .attr("class", "land")
@@ -657,7 +657,7 @@ Translation by Diep Pham, Diep Nguyen and Alexandre Bui</br>
 
     // Draw a set of routes
     function drawTrade() {
-    d3.csv("exports.csv?3", function (error, routes) {
+    d3.csv("./assets/exports.csv", function (error, routes) {
 
       routes.forEach(function(d){
         d.vol = +d.vol;
