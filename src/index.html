@@ -550,6 +550,7 @@ Translation by Diep Pham, Diep Nguyen and Alexandre Bui</br>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
     <script src="https://d3js.org/d3-geo-projection.v1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
     <script src="app.js" async></script>
 
 
@@ -625,8 +626,9 @@ Translation by Diep Pham, Diep Nguyen and Alexandre Bui</br>
     var path2 = d3.geoPath().projection(projection2);
 
     var svg = d3.select("#map").append("svg")
-      .attr("width", width)
-      .attr("height", height);
+      .attr("width", "100%")
+      .attr("height", "100%")
+      .attr("viewBox", "0 0 " + width + " " + height);
 
     // Create a few groups to layer elements correctly
     var g1 = svg.append("g");

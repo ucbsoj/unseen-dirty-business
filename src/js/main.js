@@ -3,14 +3,15 @@ import Flickity from "flickity";
 require("./lib/social"); // Twitter intent JS
 const d3 = require("d3");
 
-var s = skrollr.init({forceHeight:false});
 
+var s = skrollr.init({forceHeight:false});
 
 
 var flky = new Flickity( '.carousel', {});
 
 
 var timer;
+
 
 
 $(window).on('load', function() {
@@ -23,6 +24,12 @@ $(window).on("resize", function() {
 
     timer = window.setTimeout(function() {
         $('.juxtapose').attr('src', function(i, val) { return val; });
+        if($(window).width() < 1000){
+
+          $("#band-graphic svg").css({"margin-left":"5vh","margin-right":"5vh"});
+        } else {
+          $("#band-graphic svg").css({"margin-left":"20vh","margin-right":"20vh"});
+        }
     }, 300);
 
 });
@@ -40,6 +47,12 @@ d3.svg("assets/graphics.svg").then(function(data){
   placedChart
     .style("margin-left", "20vh")
     .style("margin-right", "20vh");
+
+  if($(window).width() < 1000){
+      placedChart
+    .style("margin-left", "5vh")
+    .style("margin-right", "5vh");
+  }
 
   var tooltip = placedChart.append("g")
     .attr("transform", "translate(0,0)")
@@ -162,15 +175,18 @@ $(document).scroll(function() {
 });
 
 
+var vimeoVideo = new Vimeo.Player($('.fullvideo iframe')[0]);
 
 
 $('#play-video').click(function(){
   $('.fullvideo').css('display','block');
+  $(".fullvideo")
   $('header').css('display','none');
 });
 
 $('.close').click(function() {
   $('.fullvideo').css('display','none');
+  vimeoVideo.pause();
   $('header').css('display','flex');
 
 })

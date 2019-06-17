@@ -1,7 +1,7 @@
 @import 'values';
 /*
 Shims for Flexbox - should work on Safari and IE10+
-*/
+*/ 
 
 .display-flex {
   display: -webkit-flex;
@@ -388,7 +388,7 @@ footer::after {
 }
 .embed-container {
   position: relative;
-  padding-bottom: 65%;
+  padding-bottom: 100vh;
   height: 0;
   overflow: hidden;
   max-width: 100%;
@@ -717,6 +717,7 @@ section {
   height:100%;
   width:100%;
   background: black;
+  z-index: 9000;
 
   .close{
     position: absolute;
@@ -734,6 +735,12 @@ section {
   .fullvideo-wrapper{
     padding-left: 30px;
     width: 98%;
+  }
+
+  @media (min-aspect-ratio:16/9){
+
+
+
   }
 
 }
