@@ -32858,6 +32858,12 @@ var timer;
     (0, _jquery2.default)('.juxtapose').attr('src', function (i, val) {
       return val;
     });
+    if ((0, _jquery2.default)(window).width() < 1000) {
+
+      (0, _jquery2.default)("#band-graphic svg").css({ "margin-left": "5vh", "margin-right": "5vh" });
+    } else {
+      (0, _jquery2.default)("#band-graphic svg").css({ "margin-left": "20vh", "margin-right": "20vh" });
+    }
   }, 300);
 });
 
@@ -32871,9 +32877,13 @@ _$d3Node_31.svg("assets/graphics.svg").then(function (data) {
 
   placedChart.style("margin-left", "20vh").style("margin-right", "20vh");
 
+  if ((0, _jquery2.default)(window).width() < 1000) {
+    placedChart.style("margin-left", "5vh").style("margin-right", "5vh");
+  }
+
   var tooltip = placedChart.append("g").attr("transform", "translate(0,0)").style("opacity", 0);
 
-  tooltip.append("rect").attr("width", 80).attr("height", 75).attr("x", 20).attr("y", 20).style("stroke", "black").style("stroke-width", "1px").style("fill", "white").style("fill-opacity", 0.7).style("pointer-events", "none");
+  tooltip.append("rect").attr("width", 85).attr("height", 75).attr("x", 20).attr("y", 20).style("stroke", "black").style("stroke-width", "1px").style("fill", "white").style("fill-opacity", 0.7).style("pointer-events", "none");
 
   var tooltipTextTitle = tooltip.append("text").style("font-size", "12px").style("font-family", "sans-serif").style("font-weight", "bold").attr("x", 30).attr("y", 40);
 
@@ -32903,6 +32913,7 @@ _$d3Node_31.svg("assets/graphics.svg").then(function (data) {
     tooltipTextEndData.text(dataEnd);
   }).on("mouseout", function () {
     _$d3Node_31.select(this).style("fill-opacity", 1);
+    tooltip.style("opacity", 0);
   }).on("mousemove", function () {
     var mx = _$d3Node_31.mouse(this)[0] - 100;
     var my = _$d3Node_31.mouse(this)[1] - 150;
@@ -32946,13 +32957,17 @@ _$d3Node_31.svg("assets/graphics.svg").then(function (data) {
 
 });
 
+var vimeoVideo = new Vimeo.Player((0, _jquery2.default)('.fullvideo iframe')[0]);
+
 (0, _jquery2.default)('#play-video').click(function () {
   (0, _jquery2.default)('.fullvideo').css('display', 'block');
+  (0, _jquery2.default)(".fullvideo");
   (0, _jquery2.default)('header').css('display', 'none');
 });
 
 (0, _jquery2.default)('.close').click(function () {
   (0, _jquery2.default)('.fullvideo').css('display', 'none');
+  vimeoVideo.pause();
   (0, _jquery2.default)('header').css('display', 'flex');
 });
 
