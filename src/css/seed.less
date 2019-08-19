@@ -9,6 +9,82 @@ Shims for Flexbox - should work on Safari and IE10+
   display: flex;
 }
 
+.scroll {
+  position: relative;
+  padding-top: 9vh;
+  width: 24px;
+  height: 24px;
+}
+
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.text {
+  display: block;
+  margin-top: 65px;
+  margin-left: -38px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 14px;
+  color: #fffff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  animation: pulse 2s linear alternate infinite;
+}
+
 .flex(...) {
   -webkit-flex: @arguments;
   -ms-flex: @arguments;
@@ -103,9 +179,11 @@ iframe {
 main {
   display: block;
 }
+
 img {
   width: 100%;
 }
+
 a {
   color: #EC1C24;
   text-decoration: none;
@@ -208,15 +286,65 @@ blockquote {
     font-size: 0.8em;
   }
 }
+
 li {
   max-width: 650px;
   margin: 0 auto;
 }
+
 @media (max-width: 480px) {
   li {
     margin: 0 5px;
   }
+
+  .pquote{
+    font-size: 17px;
+    font-weight: normal;
+    padding-left: 80px;
+  }
+
+  .pquote2{
+    font-size: 17px;
+    font-weight: normal;
+    padding-right: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #topper .deck {
+    line-height: 1.2;
+    font-size: 18px;
+  }
+
+  .text {
+    display:none;
+  }
 }
+
+
+@media (max-width: 380px) {
+    .scroll{
+      padding-top: 1vh;
+    }
+
+    .chevron {
+      width: 20px;
+      height: 5px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 760px) {
+    .scroll{
+      padding-top: 20vh;
+    }
+}
+
+@media (max-width: 320px) {
+    .scroll{
+      display: none;
+    }
+}
+
 .author {
   margin-top: 10px;
   font-size: 15px;
@@ -336,11 +464,13 @@ header .logo-link img {
 .inline-img .caption {
   padding: 0;
 }
+
 @media (max-width: 768px) {
   .inline-img .caption {
     padding: 0 10px;
   }
 }
+
 footer {
   background: #222222;
   opacity: 0.95;
@@ -457,16 +587,20 @@ footer::after {
     opacity: 1;
   }
 }
+
 header {
   display: none;
   /*for now*/
 }
+
 body {
   background: #f2f2f2;
 }
+
 iframe {
   width: 100%;
 }
+
 .sticky {
   display: flex;
   height: 100vh;
@@ -478,6 +612,7 @@ iframe {
   position: -webkit-sticky;
   position: sticky;
 }
+
 .sticky img {
   display: block;
   -o-object-fit: contain;
@@ -485,10 +620,13 @@ iframe {
   width: 100%;
   height: 100%;
 }
+
 #topper {
   color: #fff;
   position: relative;
+  display: flex;
 }
+
 #topper .bg-img {
   filter: blur(10px);
   -webkit-filter: blur(10px);
@@ -498,6 +636,7 @@ iframe {
   align-items: center;
   align-self: flex-start;
 }
+
 #topper .title {
   font-family: "Source Sans Pro Bold", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 100%;
@@ -520,38 +659,42 @@ iframe {
   /* Opera < 12.1 */
   animation: fadein 5s;
 }
-#topper h1 {
-  font-size: 5em;
-  line-height: 1;
-  margin: 0;
-  font-family: "Lora", Georgia, serif;
-  padding-top: 150px;
+
+#topper img {
+  max-width: 800px;
+  height: auto;
+  padding-bottom: 20px;
 }
+
 #topper .deck {
   max-width: 700px;
   font-family: "Lora", Georgia, serif;
   line-height: 1.4;
   text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #topper .film {
   background-color: gray;
+  font-weight: bold;
   border: none;
   color: white;
   margin-top: 40px;
-  padding: 12px 25px;
+  padding: 11px 23px;
   text-align: center;
   text-decoration: none;
   display: flex;
-  font-size: 16px;
+  font-size: 18px;
+  letter-spacing: 1px;
   cursor: pointer;
 }
 
-#topper .scroll {
-  text-align: center;
-  padding-top: 200px;
-  display: flex;
-}
+// #topper .scroll {
+//   // text-align: center;
+//   // padding-top: 200px;
+//   display: flex;
+// }
 
 .spacer {
   padding: 0 0 10vh;
@@ -649,7 +792,7 @@ section {
 #topper{
   position: fixed;
   width:100%;
-  top:77px;
+  top:60px;
   left:0;
 }
 
@@ -1035,17 +1178,6 @@ header{
 .land { fill:#c9c9c9; }
 
 svg { background: #efefef; }
-
-h1{
-  font-size:30px;
-  font-family: 'Roboto', sans-serif;
-  text-align:center
-}
-
-
-
-
-
 
 footer{
   color:#fff;
